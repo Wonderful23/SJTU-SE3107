@@ -14,7 +14,7 @@ public class AppTest extends TestCase{
 	    public void testRead()throws IOException{
 	        try{
 	        Set<String>wordDict =new HashSet<String>();
-	        wordDict = App.Read("C:\\Users\\hp\\Desktop\\wordLadder\\src\\dictionary.txt");
+	        wordDict = App.Read("../../dictionary.txt");
 	        assertTrue(wordDict.contains("help"));
 	        assertTrue(wordDict.contains("world"));
 	        assertTrue(wordDict.contains("like"));
@@ -71,7 +71,7 @@ public class AppTest extends TestCase{
 	    public void testBfs(){
 	        try{
 	        Set<String> wordDict = new HashSet<String>();
-	        wordDict = App.Read("C:\\Users\\hp\\Desktop\\wordLadder\\src\\dictionary.txt");
+	        wordDict = App.Read("../../dictionary.txt");
 	        ArrayList<Node> temp1 = App.bfs("wonderful","help",wordDict);
 	        assertEquals(0,temp1.size());
 	        ArrayList<Node> temp2 =App.bfs("code","code",wordDict);

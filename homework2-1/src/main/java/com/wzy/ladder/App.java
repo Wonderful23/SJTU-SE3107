@@ -96,7 +96,7 @@ public class App{
 	}
 	public static void run(){
 		try{
-			String filename ="C:\\Users\\hp\\Desktop\\wordLadder\\src\\dictionary.txt";
+			String filename ="../../dictionary.txt";
 			Set<String> wordDict = Read(filename);
 			System.out.println("Wordladder Begin:");
 			Scanner sc = new Scanner(System.in);
