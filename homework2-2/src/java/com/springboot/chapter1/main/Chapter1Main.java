@@ -10,11 +10,19 @@ import java.io.FileInputStream;
 import java.util.*;
 import java.io.*;
 import java.util.HashSet;
+import org.springframework.ui.Model;
+import org.springframework.web.servlet.ModelAndView;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 class Node{
 	String word,preWord;
 	int distance;
@@ -123,21 +131,29 @@ public class Chapter1Main {
 		return "index";
 	}
 
-	@RequestMapping("/test")
+	@RequestMapping("/demo")
 	@ResponseBody
-	public  String demo() {
+	public void  demo(HttpServletRequest request,HttpServletResponse response) {
+		String begin = request.getParameter("begin");
+		String end = request.getParameter("end");
 		try{
 			String filename ="C:\\Users\\hp\\Desktop\\dictionary.txt";
 			Set<String> wordDict = Read(filename);
-			String begin = "hate";
-			String end = "data";
 			ArrayList<Node> visit= bfs(begin,end,wordDict);
 			String result = printpath(visit,begin,end);
-			return result;
+			Map<String, String> model = new HashMap<String,String>();
+			model.put("begin", begin);
+			model.put("end", end);
+			model.put("result",result);
+			PrintWriter out = response.getWriter();
+			out.print("<h1>Welcome to Wordladder</h1>");
+			out.print("<br>begin->end:"+begin);
+			out.print("->"+end);
+			out.print("<br>result:"+result);
+			out.print("<a href='../index'>back</a>");
 		}
-		catch(IOException e){
+		catch(Exception e){
 			System.out.println("No find the dictionary!");
-			return "No find the dictionary!";
 		}
 	}
 }
