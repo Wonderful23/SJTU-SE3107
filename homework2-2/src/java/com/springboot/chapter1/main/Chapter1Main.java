@@ -118,6 +118,11 @@ public class Chapter1Main {
 		br.close();
 		return wordDict;
 	}
+	@RequestMapping("/index")
+	public String index() {
+		return "index";
+	}
+
 	@RequestMapping("/test")
 	@ResponseBody
 	public  String demo() {
