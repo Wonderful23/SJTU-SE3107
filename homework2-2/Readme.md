@@ -11,3 +11,8 @@
 - restful应用使用springboot的框架中的@RequestMapping("/templates")进行回应
 - @RequestMapping("/templates") 的返回值为ModelAndView,设置setViewName("templates/demo.html"）跳转
 - 在原本基础上新增加mockTestA()的测试用例对controller进行测试。具体是使用mockMvc进行测试。
+
+## 相关链接
+- [gitflow](https://github.com/Wonderful23/SJTU-SE3107/commits/master)
+- [Junit中测试Controller](https://www.cnblogs.com/jiangbei/p/8432985.html)
+- [npm run build进行打包](https://www.cnblogs.com/qiu-Ann/p/7477593.html)
