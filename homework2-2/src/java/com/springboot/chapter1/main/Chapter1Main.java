@@ -137,7 +137,7 @@ public class Chapter1Main {
 		String begin = request.getParameter("begin");
 		String end = request.getParameter("end");
 		try{
-			String filename ="../dictionary.txt";
+			String filename ="../../dictionary.txt";
 			Set<String> wordDict = Read(filename);
 			ArrayList<Node> visit= bfs(begin,end,wordDict);
 			String result = printpath(visit,begin,end);
@@ -166,7 +166,7 @@ public class Chapter1Main {
 		String begin = request.getParameter("begin");
 		String end = request.getParameter("end");
 		try{
-			String filename ="../dictionary.txt";
+			String filename ="../../dictionary.txt";
 			Set<String> wordDict = Read(filename);
 			ArrayList<Node> visit= bfs(begin,end,wordDict);
 			String result = printpath(visit,begin,end);
