@@ -137,7 +137,7 @@ public class Chapter1Main {
 		String begin = request.getParameter("begin");
 		String end = request.getParameter("end");
 		try{
-			String filename ="../dictionary.txt";
+			String filename ="../../dictionary.txt";
 			Set<String> wordDict = Read(filename);
 			ArrayList<Node> visit= bfs(begin,end,wordDict);
 			String result = printpath(visit,begin,end);
@@ -146,10 +146,11 @@ public class Chapter1Main {
 			modelAndView.addObject("begin", begin);
 			modelAndView.addObject("end", end);
 			modelAndView.addObject("result", result);
-			//System.out.println("test");
+			//System.out.println(result);
 			return modelAndView;
 		}
 		catch(Exception e){
+			System.out.println("Hello World!");
 			System.out.println("No find the dictionary!");
 			ModelAndView modelAndView = new ModelAndView();
 			String result = "No find the dictionary!";
