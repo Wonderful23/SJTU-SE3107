@@ -14,8 +14,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+            <state relative-caret-position="381">
+              <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -23,8 +23,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/java/com/springboot/chapter1/main/Chapter1Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="19" column="54" selection-start-line="12" selection-end-line="22" selection-end-column="39" />
+            <state relative-caret-position="49">
+              <caret line="135" column="21" lean-forward="true" selection-start-line="135" selection-start-column="11" selection-end-line="135" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -32,14 +35,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/springboot/chapter1/main/testChapter1Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="28" column="54" lean-forward="true" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+            <state relative-caret-position="193">
+              <caret line="86" column="56" lean-forward="true" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#405#406#0" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#564#572#0" expanded="true" />
-                <element signature="e#2963#2971#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -48,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="9" column="6" selection-end-line="24" selection-end-column="7" />
+            <state relative-caret-position="38">
+              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -121,16 +120,16 @@
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/resources/static/index.html" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/demo.html" />
-        <option value="$PROJECT_DIR$/src/java/com/springboot/chapter1/main/Chapter1Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/springboot/chapter1/main/TestChapter1Main.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/java/com/springboot/chapter1/main/Chapter1Main.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/springboot/chapter1/main/testChapter1Main.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="160" />
-    <option name="y" value="30" />
+    <option name="x" value="1033" />
+    <option name="y" value="143" />
     <option name="width" value="880" />
     <option name="height" value="585" />
   </component>
@@ -139,7 +138,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -221,11 +219,12 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554633531293" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554640844536" />
     <property name="last_opened_file_path" value="C:/Junit" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -287,9 +286,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="testChapter1Main.mockTestA" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="chapter1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.springboot.chapter1.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.springboot.chapter1.main" />
+      <option name="MAIN_CLASS_NAME" value="com.springboot.chapter1.main.testChapter1Main" />
+      <option name="METHOD_NAME" value="mockTestA" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.testChapter1Main" />
+        <item itemvalue="JUnit.testChapter1Main.mockTestA" />
         <item itemvalue="Application.Chapter1Main" />
       </list>
     </recent_temporary>
@@ -308,18 +324,41 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="testChapter1Main - 2019.04.07 at 17h 24m 22s.xml">
+    <history-entry file="testChapter1Main - 2019.04.07 at 20h 17m 48s.xml">
       <configuration name="testChapter1Main" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testChapter1Main - 2019.04.07 at 17h 29m 14s.xml">
+    <history-entry file="testChapter1Main - 2019.04.07 at 20h 20m 05s.xml">
+      <configuration name="testChapter1Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testChapter1Main - 2019.04.07 at 20h 20m 30s.xml">
+      <configuration name="testChapter1Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testChapter1Main - 2019.04.07 at 20h 22m 18s.xml">
+      <configuration name="testChapter1Main" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testChapter1Main_mockTestA - 2019.04.07 at 20h 28m 40s.xml">
+      <configuration name="testChapter1Main.mockTestA" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testChapter1Main_mockTestA - 2019.04.07 at 20h 32m 33s.xml">
+      <configuration name="testChapter1Main.mockTestA" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testChapter1Main_mockTestA - 2019.04.07 at 20h 35m 04s.xml">
+      <configuration name="testChapter1Main.mockTestA" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testChapter1Main_mockTestA - 2019.04.07 at 20h 40m 14s.xml">
+      <configuration name="testChapter1Main.mockTestA" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testChapter1Main_mockTestA - 2019.04.07 at 20h 40m 44s.xml">
+      <configuration name="testChapter1Main.mockTestA" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="testChapter1Main - 2019.04.07 at 20h 40m 56s.xml">
       <configuration name="testChapter1Main" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18297587" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.03686327" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -328,7 +367,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.7439887" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19519095" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39886847" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -385,20 +424,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/css/2.6e9662d7.chunk.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="6" selection-end-line="24" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -410,6 +435,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="37" selection-start-column="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -427,28 +473,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/springboot/chapter1/main/Chapter1Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="54" selection-start-line="12" selection-end-line="22" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+        <state relative-caret-position="49">
+          <caret line="135" column="21" lean-forward="true" selection-start-line="135" selection-start-column="11" selection-end-line="135" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/springboot/chapter1/main/testChapter1Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="28" column="54" lean-forward="true" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
+        <state relative-caret-position="193">
+          <caret line="86" column="56" lean-forward="true" selection-start-line="86" selection-start-column="56" selection-end-line="86" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#564#572#0" expanded="true" />
-            <element signature="e#2963#2971#0" expanded="true" />
           </folding>
         </state>
       </provider>

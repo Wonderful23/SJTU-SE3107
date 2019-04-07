@@ -21,6 +21,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER" level="application" />
     <orderEntry type="inheritedJdk" />
+    <orderEntry type="library" name="Junit" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" name="Maven: net.sourceforge.nekohtml:nekohtml:1.9.22" level="project" />
     <orderEntry type="library" name="Maven: xerces:xercesImpl:2.11.0" level="project" />
@@ -85,7 +86,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:5.0.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.0.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.0.4.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: junit:junit:3.8.1" level="project" />
-    <orderEntry type="library" name="Junit" level="project" />
+    <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
   </component>
 </module>

@@ -161,6 +161,23 @@ public class Chapter1Main {
 			return modelAndView;
 		}
 	}
+	@RequestMapping("/demo")
+	public String   demo1(HttpServletRequest request,HttpServletResponse response) {
+		String begin = request.getParameter("begin");
+		String end = request.getParameter("end");
+		try{
+			String filename ="../dictionary.txt";
+			Set<String> wordDict = Read(filename);
+			ArrayList<Node> visit= bfs(begin,end,wordDict);
+			String result = printpath(visit,begin,end);
+			return result;
+		}
+		catch(Exception e){
+			System.out.println("No find the dictionary!");
+			String result = "No find the dictionary!";
+			return result;
+		}
+	}
 }
 
 

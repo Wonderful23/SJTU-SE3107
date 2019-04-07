@@ -4,6 +4,22 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 import junit.framework.*;
+import org.junit.Before;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
+import org.springframework.test.web.servlet.*;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.context.WebApplicationContext;
+
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.util.*;
@@ -11,18 +27,57 @@ import java.io.*;
 import java.util.HashSet;
 import java.io.IOException;
 import org.junit.After;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
+import org.springframework.test.*;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestComponent;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
+import org.junit.Test;
+import org.springframework.web.context.WebApplicationContext;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.web.servlet.ModelAndView;
 
+import static org.junit.Assert.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringBootTest
 public class testChapter1Main extends TestCase{
-        public testChapter1Main(String name){
-            super(name);
-        }
-        public void testRead()throws IOException {
+    public testChapter1Main(){ }
+    @Autowired
+    Chapter1Main temp;
+    public MockMvc mockMvc;
+    public WebApplicationContext wac;
+    @Before
+    public void setUp() throws Exception{
+        this.mockMvc = MockMvcBuilders.standaloneSetup(temp).build();
+    }
+    @Test
+    public void mockTestA() throws Exception {
+        MvcResult result = this.mockMvc.perform(
+                get("/templates")    //请求的url,请求的方法是get
+                        .contentType(MediaType.APPLICATION_FORM_URLENCODED).param("begin","hate").param("end","data")         //添加参数
+        ).andExpect(status().isOk())    //返回的状态是200
+                .andDo(print())         //打印出请求和相应的内容
+                .andReturn();// 获取方法的返回值
+        String result1 = (String)result.getModelAndView().getModel().get("result");
+        Assert.assertEquals("hate->date->data", result1);
+    }
+    @Test
+    public void testRead()throws IOException {
             try{
                 Set<String> wordDict =new HashSet<String>();
                 wordDict = Chapter1Main.Read("C:\\Users\\hp\\Desktop\\dictionary.txt");
@@ -38,6 +93,7 @@ public class testChapter1Main extends TestCase{
                 fail("The test is failed");
             }
         }
+        @Test
         public void testUnRead()throws IOException{
             try{
                 Set<String>wordDict = Chapter1Main.Read("123.txt");
@@ -47,6 +103,7 @@ public class testChapter1Main extends TestCase{
                 assertTrue(true);
             }
         }
+        @Test
         public void testprintpath(){
             ArrayList<Node> temp1= new ArrayList<>();
             String result1 = Chapter1Main.printpath(temp1,"a","aa");
@@ -79,6 +136,7 @@ public class testChapter1Main extends TestCase{
             String result4 = Chapter1Main.printpath(temp4,"code","date");
             assertEquals(result4,"Sorry,there isn't a way between two words");
         }
+        @Test
         public void testBfs(){
             try{
                 Set<String> wordDict = new HashSet<String>();
