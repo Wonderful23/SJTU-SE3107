@@ -80,7 +80,7 @@ public class testChapter1Main extends TestCase{
     public void testRead()throws IOException {
             try{
                 Set<String> wordDict =new HashSet<String>();
-                wordDict = Chapter1Main.Read("C:\\Users\\hp\\Desktop\\dictionary.txt");
+                wordDict = Chapter1Main.Read("../dictionary.txt");
                 assertTrue(wordDict.contains("help"));
                 assertTrue(wordDict.contains("world"));
                 assertTrue(wordDict.contains("like"));
