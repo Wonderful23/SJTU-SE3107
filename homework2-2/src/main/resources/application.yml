@@ -1,7 +1,5 @@
 spring:
-  mvc:
-    view:
-      # 页面默认前缀目录
-      prefix: /WEB-INF/
-      # 响应页面默认后缀
-      suffix: .jsp
+  thymeleaf:
+    mode: HTML # Template mode to be applied to templates. See also Thymeleaf's TemplateMode enum.
+    prefix: classpath:/templates/ # Prefix that gets prepended to view names when building a URL.
+    suffix: .html

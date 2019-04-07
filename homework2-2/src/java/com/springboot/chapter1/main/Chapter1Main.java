@@ -11,6 +11,7 @@ import java.util.*;
 import java.io.*;
 import java.util.HashSet;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -131,29 +132,33 @@ public class Chapter1Main {
 		return "index";
 	}
 
-	@RequestMapping("/demo")
-	@ResponseBody
-	public void  demo(HttpServletRequest request,HttpServletResponse response) {
+	@RequestMapping("/templates")
+	public ModelAndView   demo(HttpServletRequest request,HttpServletResponse response) {
 		String begin = request.getParameter("begin");
 		String end = request.getParameter("end");
 		try{
-			String filename ="C:\\Users\\hp\\Desktop\\dictionary.txt";
+			String filename ="../dictionary.txt";
 			Set<String> wordDict = Read(filename);
 			ArrayList<Node> visit= bfs(begin,end,wordDict);
 			String result = printpath(visit,begin,end);
-			Map<String, String> model = new HashMap<String,String>();
-			model.put("begin", begin);
-			model.put("end", end);
-			model.put("result",result);
-			PrintWriter out = response.getWriter();
-			out.print("<h1>Welcome to Wordladder</h1>");
-			out.print("<br>begin->end:"+begin);
-			out.print("->"+end);
-			out.print("<br>result:"+result);
-			out.print("<a href='../index'>back</a>");
+			ModelAndView modelAndView = new ModelAndView();
+			modelAndView.setViewName("templates/demo.html");
+			modelAndView.addObject("begin", begin);
+			modelAndView.addObject("end", end);
+			modelAndView.addObject("result", result);
+			//System.out.println("test");
+			return modelAndView;
 		}
 		catch(Exception e){
 			System.out.println("No find the dictionary!");
+			ModelAndView modelAndView = new ModelAndView();
+			String result = "No find the dictionary!";
+			modelAndView.setViewName("templates/demo.html");
+			modelAndView.addObject("begin", begin);
+			modelAndView.addObject("end", end);
+			modelAndView.addObject("result", result);
+			//System.out.println("test");
+			return modelAndView;
 		}
 	}
 }
