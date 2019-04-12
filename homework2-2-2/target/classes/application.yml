@@ -1,0 +1,5 @@
+spring:
+  thymeleaf:
+    mode: HTML # Template mode to be applied to templates. See also Thymeleaf's TemplateMode enum.
+    prefix: classpath:/templates/ # Prefix that gets prepended to view names when building a URL.
+    suffix: .html
